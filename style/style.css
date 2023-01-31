@@ -1,0 +1,122 @@
+* {
+  font-size: 16px;
+}
+@media (max-width: 992px) {
+  * {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  * {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  * {
+    font-size: 10px;
+  }
+}
+
+.slider__wrapper {
+  overflow: hidden;
+}
+.slider__cards {
+  display: flex;
+}
+.slider__card {
+  margin-right: 5px;
+}
+.slider__card__content {
+  height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .slider__card__content {
+    padding: 0 50px;
+  }
+}
+.slider__card__content__supTitle {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 0 10px;
+}
+.slider__card__content__title {
+  font-family: "Viga";
+  font-weight: 400;
+  font-size: 7.5rem;
+  line-height: 8rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+}
+.slider__card__content__text {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #ffffff;
+  margin: 4.0625rem 0 2.5rem 0.75rem;
+}
+.slider__card__content__link {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  text-transform: capitalize;
+}
+.slider__card__content__link::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 1px;
+  width: 90%;
+  bottom: -3px;
+  left: 0;
+  background-color: #ffffff;
+}
+.slider__arrows--rigth {
+  position: absolute;
+  bottom: 4.6875rem;
+  right: 6.25rem;
+}
+.slider__arrows--left {
+  position: absolute;
+  bottom: 4.6875rem;
+  left: 6.25rem;
+}
+
+.box {
+  width: 515px;
+}
+@media (max-width: 576px) {
+  .box {
+    width: 400px;
+  }
+}
+
+.cyrcle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+@media (max-width: 576px) {
+  .cyrcle {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,59 @@
+@import "_variables";
+
+@mixin title {
+    font-family: 'Viga';
+    font-weight: 400;
+    font-size: 7.5rem;
+    line-height: 8rem;
+
+    color: $base-color;
+}
+
+@mixin supTitle {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    
+    color: $base-color;
+}
+
+@mixin text {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    
+    color: $base-color;
+}
+
+@mixin link {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+
+    color: $base-color;
+    text-decoration: none;
+}
+
+// Малі (small) пристрої
+@mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+ 
+// Середні (medium) пристої
+@mixin md {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+ 
+// (large)
+@mixin lg {
+    @media (max-width: #{$screen-lg-min}) {
+        @content;
+    }
+}

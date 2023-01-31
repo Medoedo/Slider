@@ -1,0 +1,126 @@
+@import "_mixins";
+@import "_variables";
+
+* {
+    font-size: 16px;
+
+    @include lg {
+        font-size: 14px;
+    }
+
+    @include md {
+        font-size: 12px;
+    }
+
+    @include sm {
+        font-size: 10px;
+    }
+}
+
+.slider {
+    &__wrapper {
+        overflow: hidden;
+    }
+
+    &__cards {
+        display: flex;
+    }
+
+    &__card {
+        margin-right: 5px;
+
+        &__content {
+            height: 100vh;
+
+            padding: 0 100px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include md {
+                padding: 0 50px;
+            }
+
+            &__supTitle {
+                @include supTitle;
+                text-transform: uppercase;
+        
+                margin: 0 0 0 10px;
+            }
+        
+            &__title {
+                @include title;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        
+            &__text {
+                @include text;
+                margin: 4.0625rem 0 2.5rem 0.75rem;
+            }
+        
+            &__link {
+                @include link;
+        
+                position: relative;
+                text-transform: capitalize;
+        
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+        
+                    height: 1px;
+                    width: 90%;
+        
+                    bottom: -3px;
+                    left: 0;
+                    background-color: $base-color;
+                }
+            }
+        }
+    }
+
+    &__arrows {
+        &--rigth {
+            position: absolute;
+            bottom: 4.6875rem;
+            right: 6.25rem;
+        }
+        &--left {
+            position: absolute;
+            bottom: 4.6875rem;
+            left: 6.25rem;
+
+            // @include sm {
+            //     bottom: 2.6875rem;
+            //     left: 3.25rem;
+            // }
+        }
+    }
+}
+
+.box {
+    width: 515px;
+
+    @include sm {
+        width: 400px;
+    }
+}
+
+.cyrcle {
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+
+    border: 1px solid white;
+    border-radius: 50%;
+
+    @include sm {
+        width: 7px;
+        height: 7px;
+    }
+}

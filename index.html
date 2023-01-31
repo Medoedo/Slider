@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Підключення шрифтів з Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Viga&display=swap" rel="stylesheet"/>
+
+        <!-- Підключення normalize для обнулення стилів та свого власного файлу зі стилями -->
+        <link rel="stylesheet" href="style/normalize.css"/>
+        <link rel="stylesheet" href="style/style.css"/>
+
+        <title>Slider</title>
+    </head>
+
+    <body>
+        <div class="slider">
+            <div class="slider__wrapper" data-glide-el="track"> 
+                <!-- data атрибут необхідний бібліотеці Glide для того щоб додати логіку слайдам  -->
+                <ul class="slider__cards">
+                    <li class="slider__card">
+                        <section class="slider__card__content" style="background: url(img/slide1.svg)">
+                            <div class="box">
+                                <!-- Додав додатковий div з класом box для того щоб обмежити контент за шириною -->
+                                <h2 class="slider__card__content__supTitle">our vision</h2>
+                                <h2 class="slider__card__content__title">design</h2>
+                                <p class="slider__card__content__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                                <a href="#" style="display: inline-block; margin-left: 12px;">
+                                    <span class="cyrcle"></span>
+                                    <a class="slider__card__content__link" href="#">take a look</a>
+                                </a>
+                            </div>
+                            
+                        </section>
+                    </li>
+                    <li class="slider__card">
+                        <section class="slider__card__content" style="background: url(img/slide2.svg)">
+                            <div class="box">
+                                <h2 class="slider__card__content__supTitle">our vision</h2>
+                                <h2 class="slider__card__content__title">motion</h2>
+                                <p class="slider__card__content__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                                <a href="#" style="display: inline-block; margin-left: 12px;">
+                                    <span class="cyrcle"></span>
+                                    <a class="slider__card__content__link" href="#">take a look</a>
+                                </a>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="slider__card">
+                        <section class="slider__card__content" style="background: url(img/slide3.svg)">
+                            <div class="box">
+                                <h2 class="slider__card__content__supTitle">our vision</h2>
+                                <h2 class="slider__card__content__title">engine</h2>
+                                <p class="slider__card__content__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                                <a href="#" style="display: inline-block; margin-left: 12px;">
+                                    <span class="cyrcle"></span>
+                                    <a class="slider__card__content__link" href="#">take a look</a>
+                                </a>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="slider__arrows" data-glide-el="controls">
+                <img class="slider__arrows--left" src="img/arrow-left.svg" alt="" data-glide-dir="<">
+                <img class="slider__arrows--rigth" src="img/arrow-rigth.svg" alt="" data-glide-dir=">">
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script>
+            new Glide('.slider').mount()
+        </script>
+    </body>
+</html>
